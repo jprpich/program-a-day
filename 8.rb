@@ -3,23 +3,12 @@ require 'faker'
 
 # define Car class
 class Car
-
-  attr_accessor :seats, :color, :mileage, :brand
+  attr_accessor :color, :mileage, :brand
 
   def initialize(color, mileage, brand)
     @color = color
     @mileage = mileage
     @brand = brand
-    @seats = 4  
-    @distance = 0
-  end
-
-  def drive
-    @distance += 1
-  end
-
-  def reverse
-    @distance -= 1
   end
 
 end
@@ -41,7 +30,7 @@ end
 # have user choose the manufacturer and display info
 while true
 
-  print "type in a car manufacturer to see the specifications of the available cars or leave to exit shop: "
+  print "type in a car manufacturer to see the specifications of the available cars or type leave to exit shop: "
   brand = gets.chomp
 
   if brand == "leave"
